@@ -38,16 +38,16 @@ spec:
               containerPort: {{ .Values.ports.containerport }}
               protocol: {{ .Values.ports.protocol }}
           livenessProbe:
-            command:
-              exec:
+            exec:
+              command:
               - cat
               - /app/live.txt
 #            httpGet:
 #              path:
 #              port:
           readinessProbe:
-            command:
-              exec:
+            exec:
+              command:
               - cat
               - /app/live.txt
 #            httpGet:
