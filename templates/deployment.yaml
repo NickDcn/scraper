@@ -43,16 +43,16 @@ spec:
               - cat
               - /app/live.txt
 #            httpGet:
-#              path: {{ .Values.liveness.p }}
-#              port: {{ .Values.liveness.port }}
+#              path:
+#              port:
           readinessProbe:
             command:
               exec:
               - cat
               - /app/live.txt
 #            httpGet:
-#              path: {{ .Values.readiness.p }}
-#              port: {{ .Values.readiness.port }}
+#              path:
+#              port:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
