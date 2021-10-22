@@ -43,7 +43,7 @@ spec:
               - cat
               - /app/live.txt
 #            httpGet:
-#              path: {{ .Values.liveness.path }}
+#              path: {{ .Values.liveness.p }}
 #              port: {{ .Values.liveness.port }}
           readinessProbe:
             command:
@@ -51,7 +51,7 @@ spec:
               - cat
               - /app/live.txt
 #            httpGet:
-#              path: {{ .Values.readiness.path }}
+#              path: {{ .Values.readiness.p }}
 #              port: {{ .Values.readiness.port }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
