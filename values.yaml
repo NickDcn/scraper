@@ -86,10 +86,10 @@ ports:
   containerport: 80
   protocol: TCP
 
-liveness:
-  path: /
-  port: http
+#liveness:
+#  path: /
+#  port: http
 
-readiness:
-  path: /
-  port: http
+#readiness:
+#  path: /
+#  port: http

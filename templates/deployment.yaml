@@ -38,21 +38,21 @@ spec:
               containerPort: {{ .Values.ports.containerport }}
               protocol: {{ .Values.ports.protocol }}
           livenessProbe:
-#            command:
-#              exec:
-#              - cat
-#              - /app/live.txt
-            httpGet:
-              path: {{ .Values.liveness.path }}
-              port: {{ .Values.liveness.port }}
+            command:
+              exec:
+              - cat
+              - /app/live.txt
+#            httpGet:
+#              path: {{ .Values.liveness.path }}
+#              port: {{ .Values.liveness.port }}
           readinessProbe:
-#            command:
-#              exec:
-#              - cat
-#              - /app/live.txt
-            httpGet:
-              path: {{ .Values.readiness.path }}
-              port: {{ .Values.readiness.port }}
+            command:
+              exec:
+              - cat
+              - /app/live.txt
+#            httpGet:
+#              path: {{ .Values.readiness.path }}
+#              port: {{ .Values.readiness.port }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
